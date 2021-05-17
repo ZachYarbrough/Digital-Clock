@@ -1,4 +1,4 @@
-function updateClock() {
+setInterval(()=> {
 let date = new Date();
 
 //Gets local time
@@ -13,7 +13,4 @@ min = (min < 10) ? "0" + min : min;
 sec = (sec < 10) ? "0" + sec : sec;
 
 document.getElementById("time").innerHTML = `${hour}:${min}:${sec} ${timeOfDay}`; 
-setInterval(updateClock, 1000);
-}
-
-updateClock();
+})
