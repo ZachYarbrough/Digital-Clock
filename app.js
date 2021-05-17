@@ -8,7 +8,7 @@ let sec = date.getSeconds();
 
 //Correctly displays time based on standard time format
 let timeOfDay = (hour >= 12) ? 'PM' : 'AM';
-hour = (hour == 0) ? 12 : (hour > 12) ? hour - 12 : hour;
+hour = (hour < 10) ? "0" + hour : (hour == 0) ? 12 : (hour > 12) ? "0" + (hour - 12) : hour;
 min = (min < 10) ? "0" + min : min;
 sec = (sec < 10) ? "0" + sec : sec;
 
